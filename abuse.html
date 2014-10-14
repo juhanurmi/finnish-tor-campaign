@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>tor.effi.org</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Raleway:700,400' rel='stylesheet' type='text/css'>
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <header id="headerwrap">
+    	<div class="container">
+        <div class="row">
+            <div class="col-md-8 center-block">
+              <br>
+              <h1>Problems?</h1>
+              <h4>Most likely you are accessing this website because you had some issue with the traffic coming from this IP. This router is part of the <a href="https://www.torproject.org/">Tor Anonymity Network</a>, which is dedicated to <a href="https://www.torproject.org/about/overview">providing privacy</a> to people who need it most: average computer users. This router IP should be generating no other traffic, unless it has been compromised.</p></h4>
+              <br>
+            </div>
+        </div>
+      </div>
+    </header>
+    <nav style="height:70px;position:fixed;width:100%;top:0;" data-scroll-header>
+    </nav>
+    <nav id="nav" class="navbar navbar-default" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a data-scroll class="navbar-brand" href="index.html#headerwrap">tor.effi.org</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="index.html">Back to index</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <section id="abusewrap">
+      <div class="container">
+        <div class="row centered">
+          <div class="col-md-10 center-block head">
+            <h3>Report abuse</h3>
+          </div>
+          <div class="col-md-10 center-block">
+            <p> Tor sees use by <a href="https://www.torproject.org/about/torusers" target="_blank">many important segments of the population</a>, including whistle blowers, journalists, Chinese dissidents skirting the Great Firewall and oppressive censorship, abuse victims, stalker targets, the US military, and law enforcement, just to name a few.  While Tor is not designed for malicious computer users, it is true that they can use the network for malicious ends. In reality however, the actual amount of <a href="https://www.torproject.org/docs/faq-abuse" target="_blank">abuse</a> is quite low. This is largely because criminals and hackers have significantly better access to privacy and anonymity than do the regular users whom they prey upon. Criminals can and do <a href="http://voices.washingtonpost.com/securityfix/2008/08/web_fraud_20_tools.html" target="_blank">build, sell, and trade</a> far larger and <a href="http://voices.washingtonpost.com/securityfix/2008/08/web_fraud_20_distributing_your.html" target="_blank">more powerful networks</a> than Tor on a daily basis. Thus, in the mind of this operator, the social need for easily accessible censorship-resistant private, anonymous communication trumps the risk of unskilled bad actors, who are almost always more easily uncovered by traditional police work than by extensive monitoring and surveillance anyway.</p>
+            
+            <p>In terms of applicable law, the best way to understand Tor is to consider it a network of routers operating as common carriers, much like the Internet backbone. However, unlike the Internet backbone routers, Tor routers explicitly do not contain identifiable routing information about the source of a packet, and no single Tor node can determine both the origin and destination of a given transmission.</p>
+
+            <p><b>As such, there is little the operator of this router can do to help you track the connection further. This router maintains no logs of any of the Tor traffic, so there is little that can be done to trace either legitimate or illegitimate traffic (or to filter one from the other). Attempts to seize this router will accomplish nothing.</b></p>
+
+            <p>If you are a representative of a company who feels that this router is being used to violate the DMCA, please be aware that this machine does not host or contain any illegal content. Also be aware that network infrastructure maintainers are not liable for the type of content that passes over their equipment, in accordance with <a href="http://www.law.cornell.edu/uscode/text/17/512" target="_blank">DMCA "safe harbor" provisions</a>. In other words, you will have just as much luck sending a takedown notice to the Internet backbone providers. Please consult <a href="https://www.torproject.org/eff/tor-dmca-response" target="_blank">EFF's prepared response</a> for more information on this matter.</p>
+
+          <p>For more information, please consult the following documentation:</p>
+
+          <ol>
+            <li><a href="https://www.torproject.org/about/overview" target="_blank">Tor Overview</a></li>
+            <li><a href="https://www.torproject.org/docs/faq-abuse" target="_blank">Tor Abuse FAQ</a></li>
+            <li><a href="https://www.torproject.org/eff/tor-legal-faq" target="_blank">Tor Legal FAQ</a></li>
+          </ol>
+
+          <p>That being said, if you still have a complaint about the router, you may email the maintainer. If complaints are related to a particular service that is being abused, We will consider removing that service from our exit policy, which would prevent our router from allowing that traffic to exit through it. We can only do this on an IP+destination port basis, however. Common P2P ports are already blocked.</p>
+
+          <p>You also have the option of blocking this IP address and others on the Tor network if you so desire. The Tor project provides a <a href="https://check.torproject.org/cgi-bin/TorBulkExitList.py" target="_blank">web service</a> to fetch a list of all IP addresses of Tor exit nodes that allow exiting to a specified IP:port combination, and an official <a href="https://www.torproject.org/tordnsel/dist/" target="_blank">DNSRBL</a> is also available to determine if a given IP address is actually a Tor exit server. Please be considerate when using these options. It would be unfortunate to deny all Tor users access to your site indefinitely simply because of a few bad apples.</p>
+          <br>
+
+           <a href="mailto:tor[-email-mark-]effi[-dot-]org"><button type="button" class="btn btn-primary">Email the maintainer</button></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="polygons2" data-speed="6" data-type="background">
+    </section>
+    <section id="footerwrap">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 effi">
+            <a href="http://effi.org" target="_blank"><img src="https://effi.org/gfx/effi-logo.png" class="img-responsive"></a>
+          </div>
+          <div class="col-md-6 team">
+            <p>Electronic Frontier Finland was founded to defend basic rights also in the Internet. The association aims to affect legislation on e.g. freedom of speech, copyright and privacy issues in Finland and Europe Effi is a charter member of European Digital Rights. Further information from Effi home page, <a href="http://effi.org" target="_blank">www.effi.org</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://rawgit.com/cferdinandi/smooth-scroll/master/dist/js/smooth-scroll.min.js"></script>
+    <script type="text/javascript">
+      $( document ).ready(function() {
+        smoothScroll.init();
+        $('#tabs').tab();
+        $('#nav').affix({
+          offset: {
+            top: $('header').height()
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

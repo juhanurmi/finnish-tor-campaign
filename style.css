@@ -1,0 +1,243 @@
+body {
+	font-family: 'Raleway', sans-serif;
+	background-color: #FAFAFA;
+	position: relative;
+}
+h1 {
+	font-weight: 700;
+}
+h3 {
+	color: #700A4D;
+}
+a,
+a:visited {
+	color: #700A4D;
+	text-decoration: underline;
+}
+a:hover {
+	color: #700A4D;
+	text-decoration: none;
+}
+.centered {
+	text-align: center;
+}
+
+/*Header*/
+#headerwrap {
+	background: #181C1D url('header-bg.jpg') no-repeat;
+	background-position: bottom right;
+	background-size: auto 400px;
+	color: #fff;
+	text-align: center;
+	padding-top: 70px;
+	min-height: 400px;
+}
+#headerwrap h1 {
+	font-size: 4em;
+}
+#headerwrap img {
+	margin-top: 20px;
+}
+#headerwrap img.img-responsive {
+	display: inline;
+}
+#headerwrap a,
+#headerwrap a:visited {
+	text-decoration: none;
+}
+#headerwrap a:hover {
+	text-decoration: underline;
+}
+#headerwrap .btn-primary {
+	background-color: #700A4D;
+	border: none;
+	border-bottom: 4px solid #55083B;
+	outline: 0;
+}
+#headerwrap .btn-primary:hover {
+	background-color: #55083B;
+	border-bottom: 4px solid #55083B;
+}
+
+/*Navigation*/
+#nav.navbar-default {
+	background-color: #700A4D;
+	border: none;
+	border-radius: 0px;
+	z-index: 900;
+}
+#nav.navbar-default a {
+	color: #fff;
+	text-decoration: none;
+}
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:hover,
+.navbar-default .navbar-nav>.active>a:focus {
+	background-color: #55083B;
+}
+#nav.navbar-default a.navbar-brand {
+	font-weight: 700;
+}
+
+/*Points*/
+#pointswrap {
+	padding-top: 40px;
+	margin-bottom: 40px;
+}
+
+/*How Tor works*/
+#howwrap {
+	overflow: hidden;
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+#howwrap .background {
+	background-color: #ECECEC;
+	transform:rotate(1.15deg);
+	-ms-transform:rotate(1.15deg);
+	-webkit-transform:rotate(1.15deg);
+	-moz-transform:rotate(1.15deg);
+	margin-left: -10px;
+	padding-top: 10px;
+	padding-bottom: 25px;
+	width: 101%
+}
+#howwrap .container {
+	transform:rotate(-1.15deg);
+	-ms-transform:rotate(-1.15deg);
+	-webkit-transform:rotate(-1.15deg);
+	-moz-transform:rotate(-1.15deg);
+}
+#howwrap img {
+	margin-top: 30px;
+}
+
+/*Effi Tor-server*/
+#effiwrap {
+	padding-top: 40px;
+	margin-bottom: 50px;
+}
+#effiwrap .head {
+	border-bottom: 1px solid #D6D6D6;
+	margin-bottom: 10px;
+}
+#effiwrap .head h4 {
+	color: #6F6F6F;
+}
+#effiwrap .btn-primary {
+	background-color: #181C1D;
+	border: none;
+	border-bottom: 4px solid #000;
+	outline: 0;
+}
+#effiwrap .btn-primary:hover {
+	background-color: #181C1D;
+	border-bottom: 4px solid #181C1D;
+}
+
+/*Parallax */
+#polygons {
+	background: url(polygons.jpg) no-repeat center center fixed;
+	display: table;
+	position: relative;
+	width: 100%;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	opacity: 0.7;
+	height: 250px;
+}
+#polygons2 {
+	background: url(polygons.jpg) no-repeat center center fixed;
+	display: table;
+	position: relative;
+	width: 100%;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	opacity: 0.7;
+	height: 100px;
+}
+
+/*Use tor*/
+#usewrap {
+	padding-top: 50px;
+	margin-bottom: 50px;
+}
+#usewrap h3 {
+	margin-top: 0;
+}
+#usewrap .nav-tabs>li>a {
+	border-radius: 0;
+}
+#usewrap .nav>li>a {
+	color: #700A4D;
+}
+#usewrap .nav-tabs>li.active>a,
+#usewrap .nav-tabs>li.active>a:hover,
+#usewrap .nav-tabs>li.active>a:focus {
+	color: #700A4D;
+}
+
+/*Effi Tor-server*/
+#abusewrap {
+	padding-top: 40px;
+	margin-bottom: 50px;
+}
+#abusewrap .head {
+	border-bottom: 1px solid #D6D6D6;
+	margin-bottom: 10px;
+}
+#abusewrap .head h4 {
+	color: #6F6F6F;
+}
+#abusewrap .center-block {
+	text-align: left !important;
+}
+#abusewrap .btn-primary {
+	background-color: #181C1D;
+	border: none;
+	border-bottom: 4px solid #000;
+	outline: 0;
+}
+#abusewrap .btn-primary:hover {
+	background-color: #181C1D;
+	border-bottom: 4px solid #181C1D;
+}
+
+/*Footer*/
+#footerwrap {
+	background: #181C1D;
+}
+#footerwrap h4 {
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+#footerwrap .team {
+	color: #fff;
+	padding-top: 20px;
+	padding-bottom: 10px;
+}
+#footerwrap .team a,
+#footerwrap .team a:visited {
+	color: #fff;
+	text-decoration: underline;
+}
+#footerwrap .team a:hover {
+	text-decoration: none;
+}
+
+/*Bootstrap modifications*/
+.center-block {
+	float: none;
+}
+.affix {
+	top: 0;
+	width: 100%;
+}
+@media (min-width: 1200px) {
+    #nav .container{
+        max-width: 878px;
+    }
+}
