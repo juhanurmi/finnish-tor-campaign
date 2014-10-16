@@ -9,6 +9,7 @@ $.getJSON( "relays_fi.json", function( data ) {
   head_item = head_item + "<th>Nopeus (KB/s)</th>";
   head_item = head_item + "<th>Päällä yhtäjaksoisesti (päivinä)</th>";
   head_item = head_item + "<th>IP-Osoite</th>";
+  head_item = head_item + "<th>Lisätietoja ja tilastoja</th>";
   head_item = head_item + "</tr></thead>";
 
   var speeds = [];
@@ -31,6 +32,7 @@ $.getJSON( "relays_fi.json", function( data ) {
       item = item + "<td>" + speed + "</td>";
       item = item + "<td>" + uptime + "</td>";
       item = item + "<td>" + val.or_addresses[0].split(":")[0] + "</td>";
+      item = item + "<td><a href='https://atlas.torproject.org/#details/" + val.fingerprint + "'>tiedot</a></td>";
       item = item + "</tr>";
 
       for(var i = 0; i <= speeds.length; ++i){

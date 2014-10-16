@@ -9,4 +9,4 @@ Suomalaisten Tor-reitittimien kunniasivu: Finnish Tor Relay Hall of Fame.
 
 Ole mukana luomassa turvallisempaa Internettiä ja edistämässä ihmisoikeuksia.
 
-[Suomalainen Tor-kampanja / The Finnish Relay Tor Campaign page.](http://xnet.fi/finnish-tor-campaign/)
+[Suomalainen Tor-kampanja / The Finnish Relay Tor Campaign page.](http://campaigns.ahmia.fi/finnish-tor-campaign/)
