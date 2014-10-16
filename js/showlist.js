@@ -60,7 +60,7 @@ $.getJSON( "relays_fi.json", function( data ) {
 
   var html_total = "Suomessa lahjoitettu Tor-verkolle: ";
   html_total = html_total + "<span> kokonaiskaista on " + total_speed + " KB/s</span>, ";
-  html_total = html_total + "<span>reitittimiä on " + speeds.length + " kpl</span>, joista ";
+  html_total = html_total + "<span>reitittimiä on " + speeds.length + " kpl</span>, <br /> joista ";
   html_total = html_total + "<span style='color: green;'>exit-tyyppisiä vakaita ja nopeita on " + fast_stable_exits + " kpl</span>";
 
   $( "<p/>", {
