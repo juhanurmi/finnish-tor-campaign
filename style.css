@@ -241,3 +241,23 @@ a:hover {
         max-width: 878px;
     }
 }
+
+
+
+
+
+/* Custom styles for relay info*/
+#relay-list {
+	width:100%;
+	font-family: "Courier New", Courier, monospace;
+	border: 1px solid black;
+	text-align: left;
+}
+
+#relay-list thead {
+	border: 1px solid black;
+}
+
+#relay-total {
+	font-size: 180%;
+}
