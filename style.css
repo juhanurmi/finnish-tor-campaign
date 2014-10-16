@@ -247,7 +247,7 @@ a:hover {
 
 /* Custom styles for relay info*/
 #relay-list {
-	width: 970px;
+	width: 1000px;
 	font-family: "Courier New", Courier, monospace;
 	border: 1px solid black;
 	text-align: left;
@@ -255,11 +255,14 @@ a:hover {
 	margin-right: auto;
 }
 
-#relay-list thead {
-	border: 1px solid black;
+#relay-list th {
+	border: 1px solid silver;
+	padding-left: 5px;
+	padding-right: 5px;
 }
 
 #relay-list td {
+	border: 1px solid silver;
 	padding-left: 5px;
 	padding-right: 5px;
 }
@@ -268,7 +271,7 @@ a:hover {
 	font-size: 180%;
 }
 
-tr:hover {
+#relay-list tr:hover {
     opacity: 1;
     background-color: #ffa;
 

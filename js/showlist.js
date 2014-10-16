@@ -8,7 +8,7 @@ $.getJSON( "relays_fi.json", function( data ) {
   head_item = head_item + "<th>Reitittimen nimi</th>";
   head_item = head_item + "<th>Nopeus (KB/s)</th>";
   head_item = head_item + "<th>Päällä tauotta</th>";
-  head_item = head_item + "<th>IP-osoite</th>";
+  head_item = head_item + "<th>Osoite</th>";
   head_item = head_item + "<th>Lisätietoja</th>";
   head_item = head_item + "</tr></thead>";
 
@@ -20,6 +20,10 @@ $.getJSON( "relays_fi.json", function( data ) {
       var first_seen = new Date(val.first_seen.split(' ').join('T'));
       var uptime = new Date(last_seen.getTime() - first_seen.getTime()).getUTCDate()-1;
       var speed = parseInt(parseFloat(val.observed_bandwidth)/1024);
+      var address = val.or_addresses[0].split(":")[0];
+      if( val.host_name ) {
+          address = val.host_name + "<br />" + address;
+      }
       total_speed = total_speed + speed;
       var flags = val.flags;
       if( flags.indexOf('Exit') > -1 && flags.indexOf('Stable') > -1 && flags.indexOf('Fast') > -1 ){
@@ -31,7 +35,7 @@ $.getJSON( "relays_fi.json", function( data ) {
       item = item + "<td>" + val.nickname + "</td>";
       item = item + "<td>" + speed + "</td>";
       item = item + "<td>" + uptime + " päivää</td>";
-      item = item + "<td>" + val.or_addresses[0].split(":")[0] + "</td>";
+      item = item + "<td>" + address + "</td>";
       item = item + "<td><a href='https://atlas.torproject.org/#details/" + val.fingerprint + "'>tiedot</a></td>";
       item = item + "</tr>";
 
