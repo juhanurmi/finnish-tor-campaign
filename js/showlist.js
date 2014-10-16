@@ -7,9 +7,9 @@ $.getJSON( "relays_fi.json", function( data ) {
   var head_item = "<thead><tr>";
   head_item = head_item + "<th>Reitittimen nimi</th>";
   head_item = head_item + "<th>Nopeus (KB/s)</th>";
-  head_item = head_item + "<th>Päällä yhtäjaksoisesti (päivinä)</th>";
-  head_item = head_item + "<th>IP-Osoite</th>";
-  head_item = head_item + "<th>Lisätietoja ja tilastoja</th>";
+  head_item = head_item + "<th>Päällä tauotta</th>";
+  head_item = head_item + "<th>IP-osoite</th>";
+  head_item = head_item + "<th>Lisätietoja</th>";
   head_item = head_item + "</tr></thead>";
 
   var speeds = [];
@@ -30,7 +30,7 @@ $.getJSON( "relays_fi.json", function( data ) {
       }
       item = item + "<td>" + val.nickname + "</td>";
       item = item + "<td>" + speed + "</td>";
-      item = item + "<td>" + uptime + "</td>";
+      item = item + "<td>" + uptime + " päivää</td>";
       item = item + "<td>" + val.or_addresses[0].split(":")[0] + "</td>";
       item = item + "<td><a href='https://atlas.torproject.org/#details/" + val.fingerprint + "'>tiedot</a></td>";
       item = item + "</tr>";
@@ -58,8 +58,8 @@ $.getJSON( "relays_fi.json", function( data ) {
       fontsize = fontsize - (fontsize - 100) / 10;
   }
 
-  var html_total = "Suomessa lahjoitettu Tor-verkolle: ";
-  html_total = html_total + "<span> kokonaiskaista on " + total_speed + " KB/s</span>, ";
+  var html_total = "Suomessa lahjoitettu Tor-verkolle: <br />";
+  html_total = html_total + "<span>siirtokapasiteettia " + total_speed + " KB/s</span>, ";
   html_total = html_total + "<span>reitittimiä on " + speeds.length + " kpl</span>, <br /> joista ";
   html_total = html_total + "<span style='color: green;'>exit-tyyppisiä vakaita ja nopeita on " + fast_stable_exits + " kpl</span>";
 

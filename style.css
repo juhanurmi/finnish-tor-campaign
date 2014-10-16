@@ -245,19 +245,33 @@ a:hover {
 
 
 
-
 /* Custom styles for relay info*/
 #relay-list {
-	width:100%;
+	width: 970px;
 	font-family: "Courier New", Courier, monospace;
 	border: 1px solid black;
 	text-align: left;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 #relay-list thead {
 	border: 1px solid black;
 }
 
+#relay-list td {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
 #relay-total {
 	font-size: 180%;
+}
+
+tr:hover {
+    opacity: 1;
+    background-color: #ffa;
+
+    -webkit-transition: all 0.5s linear;
+    transition: all 0.5s linear;
 }
