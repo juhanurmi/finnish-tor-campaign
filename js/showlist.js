@@ -3,7 +3,7 @@ $( document ).ready(function() {
 
 $.getJSON( "relays_fi.json", function( data ) {
   var items = [];
-  var updated = data.relays_published;
+  var updated = new Date(data.relays_published.split(' ').join('T')).toUTCString();
   var head_item = "<thead><tr>";
   head_item = head_item + "<th>Reitittimen nimi</th>";
   head_item = head_item + "<th>Nopeus (KB/s)</th>";
@@ -71,6 +71,11 @@ $.getJSON( "relays_fi.json", function( data ) {
   $( "<table/>", {
     "id": "relay-list",
     html: html_list_content
+  }).appendTo( "#relays" );
+
+  $( "<p/>", {
+    "id": "updated",
+    html: "Päivitetty " + updated
   }).appendTo( "#relays" );
 
 });
