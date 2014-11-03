@@ -5,6 +5,7 @@ $.getJSON( "relays_fi.json", function( data ) {
   var items = [];
   var updated = new Date(data.relays_published.split(' ').join('T')).toUTCString();
   var head_item = "<thead><tr>";
+  head_item = head_item + "<th>Sija</th>";
   head_item = head_item + "<th>Reitittimen nimi</th>";
   head_item = head_item + "<th>Nopeus (KB/s)</th>";
   head_item = head_item + "<th>Päällä tauotta</th>";
@@ -32,6 +33,7 @@ $.getJSON( "relays_fi.json", function( data ) {
       } else {
           var item = "<tr style='font-weight: 400; font-size: 100%' id='" + val.fingerprint + "'>";
       }
+      item = item + "<td>4040404</td>";
       item = item + "<td>" + val.nickname + "</td>";
       item = item + "<td>" + speed + "</td>";
       item = item + "<td>" + uptime + " päivää</td>";
@@ -56,10 +58,11 @@ $.getJSON( "relays_fi.json", function( data ) {
   fontsize = 200;
   fontweight = 900;
   for(var i = 0; i < items.length; ++i){
+      items[i] = items[i].replace("4040404", i+1)
       items[i] = items[i].replace("font-size: 100%", "font-size: "+fontsize+"%");
       items[i] = items[i].replace("font-weight: 400;", "font-weight: "+fontweight+";");
-      fontweight = fontweight - (fontweight - 400) / 10;
-      fontsize = fontsize - (fontsize - 100) / 10;
+      fontweight = parseInt(fontweight - (fontweight - 400) / 10);
+      fontsize = parseInt(fontsize - (fontsize - 100) / 10);
   }
 
   var html_total = "Suomessa lahjoitettu Tor-verkolle: <br />";
