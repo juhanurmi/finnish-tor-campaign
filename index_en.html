@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Finnish Tor Campaign</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link href='./css/fonts.css' rel='stylesheet' type='text/css'>
+    <link href="./css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <header id="headerwrap">
+    	<div class="container">
+        <div class="row">
+            <div class="col-md-8 center-block">
+              <h1>Finnish Tor Campaign</h1>
+              <h4>Tor is free software and an open network that helps you defend against traffic analysis, a form of network surveillance that threatens personal freedom and privacy, confidential business activities and relationships, and state security.</h4>
+              <h4>People in Finland can donate their bandwidth to the Tor network and support human rights. This site shows the list of Tor relays in Finland.</h4>
+            </div>
+        </div>
+      </div>
+    </header>
+    <nav style="height:70px;position:fixed;width:100%;top:0;" data-scroll-header>
+    </nav>
+    <nav id="nav" class="navbar navbar-default" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+          </button>
+          <a data-scroll class="navbar-brand" href="index.html#headerwrap">Finnish Tor Campaign</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="./" target="_blank">Finnish</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <section id="pointswrap">
+      <div class="container">
+        <div id="relays" class="row centered">
+          <h1>You can help Tor by running your own relay!</h1>
+        </div>
+      </div>
+    </section>
+    <section id="polygons2" data-speed="6" data-type="background">
+    </section>
+    <section id="footerwrap">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 effi">
+            <a href="http://effi.org" target="_blank"><img src="https://effi.org/gfx/effi-logo.png" class="img-responsive"></a>
+          </div>
+          <div class="col-md-6 team">
+            <p>Electronic Frontier Finland ry (EFFI) was founded in 2001 to defend active users and citizens of the Finnish society
+in the electronic frontier. EFFI influences legislative proposals concerning e.g. personal privacy, freedom of speech
+and user rights in copyright law. We make statements, press releases and participate actively in actual public policy
+and legal discussion. EFFI also works in close cooperation with organizations sharing same goals and values in the Europe,
+United States and elsewhere. <a href="https://effi.org/yhdistys/english.html" target="_blank">www.effi.org</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="./js/jquery-latest.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/smooth-scroll.min.js"></script>
+    <script type="text/javascript">
+      $( document ).ready(function() {
+        smoothScroll.init();
+        $('#tabs').tab();
+        $('#nav').affix({
+          offset: {
+            top: $('header').height()
+          }
+        });
+      });
+    </script>
+    <script type="text/javascript" src="./js/showlist_en.js"></script>
+  </body>
+</html>
