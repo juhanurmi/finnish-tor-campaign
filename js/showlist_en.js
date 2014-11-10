@@ -36,7 +36,7 @@ $.getJSON( "relays_fi.json", function( data ) {
       item = item + "<td>4040404</td>";
       item = item + "<td>" + val.nickname + "</td>";
       item = item + "<td>" + speed + "</td>";
-      item = item + "<td>" + uptime + " päivää</td>";
+      item = item + "<td>" + uptime + " days</td>";
       item = item + "<td>" + address + "</td>";
       item = item + "<td><a href='https://atlas.torproject.org/#details/" + val.fingerprint + "'>info</a></td>";
       item = item + "</tr>";
