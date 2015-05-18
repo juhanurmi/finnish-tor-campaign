@@ -19,7 +19,9 @@ $.getJSON( "relays_fi.json", function( data ) {
   $.each( data.relays, function( key, val ) {
       var last_seen = new Date(val.last_seen.split(' ').join('T'));
       var last_restarted = new Date(val.last_restarted.split(' ').join('T'));
-      var uptime = new Date(last_seen.getTime() - last_restarted.getTime()).getUTCDate()-1;
+      var fromDate = new Date(last_restarted);
+      var toDate = new Date(last_seen);
+      var uptime = parseInt((toDate-fromDate)/1000/60/60/24);
       var speed = parseInt(parseFloat(val.observed_bandwidth)/1024);
       var address = val.or_addresses[0].split(":")[0];
       if( val.host_name ) {
