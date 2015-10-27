@@ -28,7 +28,7 @@ if r.status_code == 200:
         exit["last_restarted"] = relay["last_restarted"]
         exit["observed_bandwidth"] = relay["observed_bandwidth"]
         exit["exit_policy_summary"] = relay["exit_policy_summary"]
-        exit["contact"] = relay["contact"]
+        exit["contact"] = relay.get("contact", "")
         exit["platform"] = relay["platform"]
         exit["or_addresses"] = relay["or_addresses"]
         exit["running"] = relay["running"]
