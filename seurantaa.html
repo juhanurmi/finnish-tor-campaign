@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Seuranta on jees!</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <style>
+    button#magnifyingGlass {
+      margin-left: 43px;
+	  width: 140px;
+	  height: 65px;
+	  cursor: pointer;
+	  outline: none;
+	  background: #3f85f7;
+	  background-repeat: no-repeat;
+	  display: inline-block;
+    }
+
+    button#magnifyingGlass:hover {
+	  background-color: #34a857;
+    }
+
+    
+    h1 {
+	  font-family: 'Futura New Book';
+	  color: #000;
+	  border: 1px solid #bab8ba;
+	  background: #fff;
+	  text-align: left;
+	  line-height: 50px;
+	  max-width: 638px;
+	  margin: 0 auto;
+	  cursor: default;
+	  -moz-user-select: none;
+	  -webkit-user-select: none;
+	  -ms-user-select: none;
+    }
+
+    footer {
+            background-color: silver;
+            width: 50%;
+            bottom: 0;
+            position: fixed;
+        }
+  </style>
+  <script>
+//var str = "Hello World!";
+//var ruinbase = window.btoa(str);
+
+var ruinbase = "WyJ2aWhhYW4gcG9tb2FuaSIsICJlcm9hbWluZW4gdHn2c3TkbmkiLCAibG9wcHV1biBwYWxhbWluZW4gdPZpc3PkIiwgIm1hc2VubnVzIiwgInNla3NpcmlpcHB1dnV1cyIsICJwb3JubyIsICJyeWht5HNla3NpIiwgImtvdGl0ZWtvaW5lbiBsaXVrYXN0ZSIsICJzZWtzdWFhbGluZW4gaGFsdXR0b211dXMiLCAiZXJvYW1pbmVuIHB1b2xpc29zdGEiLCAiZXJvdmllc3RpIHB1b2xpc29sbGUiLCAibWl0ZW4gaGF2YWl0YSBwZXR05G1pbmVuIiwgImlzeXlzdGVzdGkiLCAidGlsYXR0YXZhIGlzeXlzdGVzdGkiLCAic2FsYXN1aGRlIiwgImthbm5hYmlzIiwgInN1a3VwdW9saXRhdXRpdGVzdGl0IiwgInNla3NpIHNhbWFhIHN1a3VwdW9sdGEgb2xldmFuIGthbnNzYSIsICJob21vc2Vrc3VhYWxpc3V1cyIsICJpaGFzdHVzIHNhbWFhIHN1a3VwdW9sdGEgb2xldmFhbiIsICJzZWtzaSB09mlzc+QiLCAia2FubmFiaXMgamEgc2Vrc2kiLCAia2FubmFiaXNyaWlwcHV2dXVzIiwgImthdGthaXN1aG9pdG8iLCAib3N0YSBrYW5uYWJpc3RhIG5ldGlzdOQiLCAia2FubmFiaWtzZW4ga290aWthc3ZhdHVzIiwgInNlbGFpbWVuIGhpc3RvcmlhbiBwb2lzdG8iXQ==";
+
+var ruinedArr = eval(window.atob(ruinbase));
+
+
+$(document).ready(function() {
+
+	var coloursArr = ['#009900', '#1C8800', '#397700', '#556600', '#715500', '#8E4400', '#AA3300', '#C62200', '#E31100', '#FF0000'];
+	var ruinedCount = 0, ruinTab = '', ruinBegin = false, colour = 0;
+
+	function searchHandler() {
+
+		//reduce font size to accomodate longer strongs
+		$('h1#initial').attr('id', 'running');
+
+		//tab has been closed meaning ruining can't be continued...
+		if (ruinTab == null || typeof(ruinTab) == 'undefined') {
+			$('#ruinProgressText').html('Hakujen suoritus peruutettu. Ehkä et haluakkaan uljasta uutta maailmaa, jossa tietojasi kerätään?');
+			ga('send', 'event', 'Hakuhistoria uusiksi', 'Pysäytetty', 'undefined', ruinedCount);
+		} else {
+			//pull next query from array
+			ruinSearchQuery = ruinedArr[ruinedCount];
+
+			//do the search
+			ruinTab = window.open('https://www.google.com/search?q=' + encodeURI(ruinSearchQuery), 'ruinmysearchhistory');
+			ruinedCount++;
+			
+			//update display
+			$('#ruinProgressText').html('Hakuhistoria uusiksi... (' + (ruinedCount*2) + '%)');
+			$('#ruinProgressBar').animate({"width":"+=2%"});
+			
+			var remainder = ruinedCount % 5;
+			$('#ruinSearchesCompleted').prepend('<li id="newSearchEntry" style="font-size:' + (100 + (ruinedCount*2)) + '%; color:' + coloursArr[colour] + '">' + ruinSearchQuery + '</li>');
+			if (remainder == 0) {
+				colour++;
+			}
+
+			$('#newSearchEntry').fadeIn().removeAttr('id');
+			$('h1 #queryText').html(ruinSearchQuery);
+			
+			//at the end...
+			if(ruinedCount == 27) {
+				$('#ruinProgressText').html('Hakuhistoriasi on nyt varsin uudenlainen.');
+			} else {
+				setTimeout(searchHandler, 2000);
+			}
+		}
+	}
+
+	$('button#magnifyingGlass').click(function() {
+
+		if(ruinBegin) {
+			return false;
+		} else {
+			ruinBegin = true;
+		}
+
+		searchHandler();
+		$('#tagline').fadeOut(350);
+		$('#email').hide();
+	})
+
+});
+  </script>
+</head>
+<body>
+
+<h2>Seuranta on jees!</h2>
+  
+<ul>
+  <li>Hakuhistoriani kertoo minusta kaiken!</li>
+  <li>Minulla ei ole mitään salattavaa!</li>
+  <li>Haluan kohdennettua mainontaa!</li>
+</ul>
+  
+<p><strong>Odotan myös innolla tulevaisuudessa kohdennettua kohtelua vakuutusyhtiössä, pankissa sekä eri maiden tulliviranomaisten kanssa!</strong></p>
+
+<br />
+  
+<div class="section group" style="background:#f2f0f2; border:2px solid #e6e4e6;">
+	<div class="col span_4_of_4">
+		<h1 id="initial"><span id="queryText"><span style="color:#3f85f7">Muista</span> <span style="color:#f13b37">nämäkin</span> <span style="color:#fcbb07">Google</span> <span style="color:#34a857">-hakuni!</span></span><button id="magnifyingGlass">HAE PUOLESTANI</button></h1>
+	</div>
+</div>
+
+
+<div class="section group">
+	<div class="col span_4_of_4">
+		<p id="tagline">
+                <strong>Klikkaamalla aloitat automaattisten arkaluontoisten Google-hakujen suorittamisen ja voit seurata niitä. Suorituksen voi keskeyttää koska vain. Tarkoituksena havainnollistaa sitä, että yksityisyys internetissä on tärkeää ja pelkät hakukoneeseen syötetyt haut kertovat meistä liikaa verkkokäyttäytymistä seuraaville yrityksille ja vakoilijoille.</strong>
+                <br />
+                <br />
+                <strong>Kerromme nettihakusanoillamme hyvin tarkkaan, mitä milloinkin ajattelemme. Toisaalta hakuhistoria voidaan salaa väärentää käyttäjän tietämättä. Esimerkiksi nettihakuja ja latauksia voisi tuottaa taustalla salaa.</strong>
+                </p>
+	</div>
+</div>
+
+
+<div class="section group">
+	<div class="col span_4_of_4">
+		<div id="ruinProgressText"></div>
+	</div>
+</div>
+
+<div class="section group">
+	<div class="col span_1_of_4">
+	</div>
+	<div class="col span_2_of_4">
+		<div id="ruinProgressBar"></div>
+	</div>
+	<div class="col span_1_of_4">
+	</div>
+</div>
+
+<div class="section group">
+	<div class="col span_4_of_4">
+		<ul id="ruinSearchesCompleted">
+		</ul>
+	</div>
+</div>
+
+<p>
+Mikäli yksityisyys kiinnostaa, niin tutustu <a href="http://campaigns.ahmia.fi/">Tor-verkkoon</a>. Kannattaa myös pohtia, <a href="http://campaigns.ahmia.fi/delete-facebook/">miten Facebook toimii</a>. Se on Googlen rinnalla suurimpia yksityisten tietojen kerääjiä.
+</p>
+<p>
+On olemassa myös hakukoneita, jotka eivät kerää tietojasi, kuten <a href="https://duckduckgo.com/">https://duckduckgo.com/</a>.
+</p>
+
+<br />
+
+<hr />
+
+<br />
+
+<footer>Googlehakujen idea lainattu ansiokkaasta <a href="http://www.ruinmysearchhistory.com/">ruinmysearchhistory.com</a>-palvelusta.</footer>
+
+</body>
+</html>
